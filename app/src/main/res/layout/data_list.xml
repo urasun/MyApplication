@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content">
+    <TableRow>
+
+        <TextView
+            android:id="@+id/id"
+            android:gravity="center_vertical"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textSize="36px"
+            />
+        <TextView
+            android:id="@+id/name"
+            android:gravity="left"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:textSize="36px"
+            />
+        <TextView
+            android:id="@+id/price"
+            android:gravity="right"
+            android:layout_width="0dp"
+            android:layout_weight="0.9"
+            android:layout_height="wrap_content"
+            android:textSize="36px"
+            />
+        <TextView
+            android:id="@+id/cost"
+            android:gravity="right"
+            android:layout_width="0dp"
+            android:layout_weight="0.9"
+            android:layout_height="wrap_content"
+            android:textSize="36px"
+
+            />
+        <TextView
+            android:id="@+id/shares"
+            android:gravity="right"
+            android:layout_width="0dp"
+            android:layout_weight="1.2"
+            android:layout_height="wrap_content"
+            android:textSize="36px"
+            />
+        <TextView
+            android:id="@+id/value"
+            android:gravity="right"
+            android:layout_width="0dp"
+            android:layout_weight="1.8"
+            android:layout_height="wrap_content"
+            android:textSize="36px"
+            />
+        <TextView
+            android:id="@+id/gain"
+            android:gravity="right"
+            android:layout_width="0dp"
+            android:layout_weight="1.8"
+            android:layout_height="wrap_content"
+            android:textSize="36px"
+            />
+    </TableRow>
+</TableLayout>
