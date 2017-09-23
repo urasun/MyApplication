@@ -101,7 +101,7 @@ public class MultiStock {
 //        return null;
 //    }
 
-    private static void printStockContentList(List<StockContent> stockContentList ) {
+    private void buildStockContentList(List<StockContent> stockContentList ) {
         Iterator<StockContent> itStockContent = stockContentList.iterator();
         System.out.println("ID      NAME      SHARES  PRICE  COST      VALUE       GAIN      PERCENT");
 
@@ -115,33 +115,41 @@ public class MultiStock {
                     myStock.setPrice(stockContent.nowPrice);
                     myStock.setName( stockContent.name);
                     myStockList.set(i, myStock);
-                    break;
+             //       break;
                 }
             }
         }
-        float total  = 0;
-        float total_gain = 0;
-
-        for(int i = 0; i < myStockList.size(); i++) {
-            System.out.println(myStockList.get(i).toString());
-            total += myStockList.get(i).getPrice() * myStockList.get(i).getShares();
-            total_gain += myStockList.get(i).gain;
-        }
-
-        System.out.println(String.format("TOTAL VAL = %,10.2f   TOTAL GAIN =  %,10.2f", total,  total_gain));
+//        float total  = 0;
+//        float total_gain = 0;
+//
+//        for(int i = 0; i < myStockList.size(); i++) {
+//            System.out.println(myStockList.get(i).toString());
+//            total += myStockList.get(i).getPrice() * myStockList.get(i).getShares();
+//            total_gain += myStockList.get(i).gain;
+//        }
+//
+//        System.out.println(String.format("TOTAL VAL = %,10.2f   TOTAL GAIN =  %,10.2f", total,  total_gain));
 
     }
 
     private static void initMyStockList() {
+//        myStockList.clear();
+//        myStockList.add(new MyStock("00327", 500000, 4.86f));
+//        myStockList.add(new MyStock("00001", 10000, 102.4f));
+//        myStockList.add(new MyStock("00700", 2500, 190.5f));
+//        myStockList.add(new MyStock("03396", 10000, 43.2f));
+//        myStockList.add(new MyStock("06030", 50000, 18.6f));
+//        myStockList.add(new MyStock("01211", 500, 45.0f));
+//        myStockList.add(new MyStock("01114", 20000, 12.5f));
+//        myStockList.add(new MyStock("02318", 4000, 61.5f));
+    }
+
+    public  void addStock(MyStock myStock) {
+        myStockList.add(myStock);
+    }
+
+    public void emtpy() {
         myStockList.clear();
-        myStockList.add(new MyStock("00327", 500000, 4.86f));
-        myStockList.add(new MyStock("00001", 10000, 102.4f));
-        myStockList.add(new MyStock("00700", 2500, 190.5f));
-        myStockList.add(new MyStock("03396", 10000, 43.2f));
-        myStockList.add(new MyStock("06030", 50000, 18.6f));
-        myStockList.add(new MyStock("01211", 500, 45.0f));
-        myStockList.add(new MyStock("01114", 20000, 12.5f));
-        myStockList.add(new MyStock("02318", 4000, 61.5f));
     }
 
 
@@ -158,7 +166,7 @@ public class MultiStock {
         //   querys.put("stocks", "sh601006%2Csh601007%2Csh601008%2Csh601009%2Csz000018%2Chk00941");
 
 
-        initMyStockList();
+      //  initMyStockList();
 
 
         double total = 0;
@@ -180,7 +188,7 @@ public class MultiStock {
 
             MultiStock restInfo = JSON.parseObject(out, MultiStock.class);
             List<StockContent> stockContentList = restInfo.getShowapi_res_body().getList();
-            printStockContentList(stockContentList);
+            buildStockContentList(stockContentList);
 
             return myStockList;
 

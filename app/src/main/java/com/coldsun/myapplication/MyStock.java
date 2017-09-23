@@ -67,7 +67,7 @@ public class MyStock {
     public String toString() {
 
 //		return String.format( "ID = %s, NAME = %5s, \tSHARES = %,7d, PRICE = %6.2f,  COST = %6.2f, VAL = %,12.2f, GAIN = %,12.2f, PERCENT = %,6.2f%% ", id, name, shares, price, cost, price * shares, gain, (price - cost)/cost * 100);
-        return String.format( "%s %5s \t %,7d %6.2f %6.2f %,12.2f %,12.2f %,6.2f%% ", id, name, shares, price, cost, price * shares, gain, (price - cost)/cost * 100);
+        return String.format( "%s %5s \t %,7d %,6.2f %,6.2f %,12f %,12f %,6f%% ", id, name, shares, price, cost, price * shares, gain, (price - cost)/cost * 100);
 
     }
 

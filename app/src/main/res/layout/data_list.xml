@@ -11,15 +11,15 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
-            android:textSize="36px"
+            android:textSize="32px"
             />
         <TextView
             android:id="@+id/name"
             android:gravity="left"
             android:layout_width="0dp"
-            android:layout_weight="1.2"
+            android:layout_weight="1.45"
             android:layout_height="wrap_content"
-            android:textSize="36px"
+            android:textSize="32px"
             />
         <TextView
             android:id="@+id/price"
@@ -27,7 +27,7 @@
             android:layout_width="0dp"
             android:layout_weight="0.9"
             android:layout_height="wrap_content"
-            android:textSize="36px"
+            android:textSize="32px"
             />
         <TextView
             android:id="@+id/cost"
@@ -35,7 +35,16 @@
             android:layout_width="0dp"
             android:layout_weight="0.9"
             android:layout_height="wrap_content"
-            android:textSize="36px"
+            android:textSize="32px"
+
+            />
+        <TextView
+            android:id="@+id/percentage"
+            android:gravity="right"
+            android:layout_width="0dp"
+            android:layout_weight="0.9"
+            android:layout_height="wrap_content"
+            android:textSize="32px"
 
             />
         <TextView
@@ -44,23 +53,23 @@
             android:layout_width="0dp"
             android:layout_weight="1.2"
             android:layout_height="wrap_content"
-            android:textSize="36px"
+            android:textSize="32px"
             />
         <TextView
             android:id="@+id/value"
             android:gravity="right"
             android:layout_width="0dp"
-            android:layout_weight="1.8"
+            android:layout_weight="1.67"
             android:layout_height="wrap_content"
-            android:textSize="36px"
+            android:textSize="32px"
             />
         <TextView
             android:id="@+id/gain"
             android:gravity="right"
             android:layout_width="0dp"
-            android:layout_weight="1.8"
+            android:layout_weight="1.67"
             android:layout_height="wrap_content"
-            android:textSize="36px"
+            android:textSize="32px"
             />
     </TableRow>
 </TableLayout>
